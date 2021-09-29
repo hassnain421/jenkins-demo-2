@@ -16,11 +16,6 @@ pipeline {
 
     stages {
         stage('test') {
-            when {
-                expression {
-                    BRANCH_NAME = 'dev' && CODE_CHANGE = True
-                }
-            }
             steps {
                 echo 'testing application'
                 echo "version is ${new_version}"
